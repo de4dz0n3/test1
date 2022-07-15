@@ -8,8 +8,9 @@ def main():
     # print_hello_world()
     # print_hi('Simon')
     # read('C:\\WINDOWS\\DirectX.log')
-    get('https://www.google.ca/')
-
+    # get('https://www.google.ca/')
+    dir('C:\\WINDOWS\\*.log')
+    
 
 def get(url):
     response = requests.get(url)
@@ -24,6 +25,13 @@ def read(file):
     stream.close()
 
     print(string)
+    
+
+def dir(pathname):
+    paths = glob(pathname)
+
+    for path in paths:
+        print(path)
 
 
 def print_hello_world():
