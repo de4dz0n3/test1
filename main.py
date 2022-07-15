@@ -28,7 +28,7 @@ def read(file):
     
 
 def dir(pathname):
-    paths = glob(pathname)
+    paths = glob.glob(pathname)
 
     for path in paths:
         print(path)
